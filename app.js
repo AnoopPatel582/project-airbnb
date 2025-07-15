@@ -89,6 +89,9 @@ app.use((req,res,next)=>{
     next();
 })
 
+app.get('/', (req, res) => {
+  res.redirect("/listings"); // or res.send('Hello World') or your homepage logic
+});
 
 app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter);
