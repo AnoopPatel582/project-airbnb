@@ -22,7 +22,6 @@ const passport=require("passport");
 const LocalStrategy=require("passport-local");
 const User=require("./models/user.js");
 
-// const mongoURL='mongodb://127.0.0.1:27017/wanderlust';
 const dbUrl=process.env.ATLASDB_URL;
 
 main()
@@ -90,7 +89,7 @@ app.use((req,res,next)=>{
 })
 
 app.get('/', (req, res) => {
-  res.redirect("/listings"); // or res.send('Hello World') or your homepage logic
+  res.redirect("/listings");
 });
 
 app.use("/listings",listingRouter);
@@ -104,7 +103,6 @@ app.all("*",(req,res,next)=>{
 app.use((err,req,res,next)=>{
     let{statusCode=500,message="Something went wrong"}=err;
     res.status(statusCode).render("error.ejs",{message});
-    // res.status(statusCode).send(message);
 });
 
 app.listen(port,()=>{
