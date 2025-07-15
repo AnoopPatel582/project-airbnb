@@ -1,0 +1,36 @@
+
+        /* Base Mobile-First Styles */
+        .show-card .card-img-top {
+            border-radius: 1rem;
+            max-width: 100%;
+            object-fit: cover;
+            max-height: 220px;
+        }
+        .review-card {
+            font-size: 0.8rem;
+        }
+        .review-card .starability-result {
+            font-size: 0.8rem !important; /* small stars for all views */
+            line-height: 1;
+        }
+        #map {
+            width: 100%;
+            height: 150px;
+            border-radius: 1rem;
+        }
+        /* Desktop Overrides */
+        @media (min-width: 768px) {
+            .show-card .card-img-top{
+                max-height: 300px;
+                max-width: 80%;
+
+            }
+            #map {
+                height: 260px;
+                max-width: 80%;
+            }
+            .starability-result{
+                font-size: 0.5rem !important;
+            }
+
+        }
