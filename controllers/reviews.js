@@ -18,6 +18,10 @@ module.exports.createReview=async(req,res)=>{
 
 };
 
+/**
+ * Delete a review from a listing.
+ * Pulls the review ID from listing's reviews array and deletes review document.
+ */
 module.exports.destroyReview=async(req,res)=>{
     let{id,reviewId}=req.params;
 
