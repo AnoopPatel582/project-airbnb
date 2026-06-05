@@ -38,6 +38,9 @@ module.exports.isOwner= async(req,res,next)=>{
     next();
 }
 
+/**
+ * Authorization middleware to check if current user is author of the review.
+ */
 module.exports.isReviewAuthor= async(req,res,next)=>{
     let{id,reviewId}=req.params;
     let review=await Review.findById(reviewId);
