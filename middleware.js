@@ -14,6 +14,9 @@ module.exports.isLoggedIn=(req,res,next)=>{
     } next();
 }
 
+/**
+ * Middleware to save redirect URL to local variables prior to authentication redirect.
+ */
 module.exports.saveRedirectUrl=(req,res,next)=>{
     if(req.session.redirectUrl){
         res.locals.redirectUrl=req.session.redirectUrl;
