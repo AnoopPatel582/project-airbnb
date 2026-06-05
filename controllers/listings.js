@@ -87,6 +87,10 @@ module.exports.renderEditForm=async(req,res)=>{
     res.render("listings/edit.ejs",{listing,originalImageUrl});
 };
 
+/**
+ * Update an existing listing.
+ * Processes new image upload if provided and updates DB record.
+ */
 module.exports.updateListing=async(req,res)=>{
     let{id}=req.params;
     let listing=await Listing.findByIdAndUpdate(id,{...req.body.listing});
