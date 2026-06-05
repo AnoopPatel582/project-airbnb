@@ -2,6 +2,9 @@ const mongoose=require("mongoose");
 const Schema=mongoose.Schema;
 const passportLocalMongoose=require("passport-local-mongoose");
 
+/**
+ * User Schema representing user profile accounts.
+ */
 const userSchema=new Schema({
     email:{
         type:String,
