@@ -12,6 +12,10 @@ module.exports.index=async (req,res)=>{
     res.render("listings/index.ejs",{allListings});
 };
 
+/**
+ * Render the form to create a new listing.
+ * Requires authentication middleware prior to routing.
+ */
 module.exports.renderNewForm=(req,res)=>{
     res.render("listings/new.ejs");
 }
