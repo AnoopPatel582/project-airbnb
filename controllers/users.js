@@ -1,5 +1,8 @@
 const User=require("../models/user");
 
+/**
+ * Render the user signup registration form.
+ */
 module.exports.renderSignupForm=(req,res)=>{
     res.render("users/signup.ejs");
 };
