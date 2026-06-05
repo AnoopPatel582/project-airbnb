@@ -3,6 +3,9 @@ const Schema=mongoose.Schema;
 const Review=require("./review.js");
 const { ref } = require("joi");
 
+/**
+ * Listing Schema representing a rental property listing.
+ */
 const listingSchema=new Schema({
     title: {
         type:String,
