@@ -44,6 +44,7 @@ app.use(methodOverride("_method"));
 app.engine('ejs', ejsMate);
 app.use(express.static(path.join(__dirname,"/public")));
 
+// Configure Mongo Session Store to persist login sessions in database
 const store=MongoStore.create({
     mongoUrl:dbUrl,
     crypto:{
