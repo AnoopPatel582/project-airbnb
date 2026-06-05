@@ -1,6 +1,10 @@
 const Listing=require("../models/listing");
 const Review=require("../models/review");
 
+/**
+ * Create a new review for a listing.
+ * Appends the review to the listing and sets the current user as author.
+ */
 module.exports.createReview=async(req,res)=>{
     let listing=await Listing.findById(req.params.id);
     let newReview=new Review (req.body.review);
