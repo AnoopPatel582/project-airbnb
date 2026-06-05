@@ -41,6 +41,11 @@ module.exports.showListing=async(req,res)=>{
     res.render("listings/show.ejs",{listing});
 }
 
+/**
+ * Create a new listing.
+ * Geocodes the location, processes the uploaded image via Cloudinary,
+ * sets the owner, and saves it to the database.
+ */
 module.exports.createListing=async(req,res,next)=>{
   let response=await geocodingClient
     .forwardGeocode({
