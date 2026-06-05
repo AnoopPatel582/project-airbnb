@@ -1,0 +1,34 @@
+
+        /* Base Mobile-First Styles */
+        .show-card .card-img-top {
+            border-radius: 1rem;
+            max-width: 100%;
+            object-fit: cover;
+            max-height: 220px;
+        }
+        .review-card {
+            max-width: 90%;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+            margin-left: 1rem;
+            padding-bottom: 0.5rem;
+
+        }
+        #map {
+            width: 100%;
+            height: 150px;
+            border-radius: 1rem;
+        }
+        /* Desktop Overrides */
+        @media (min-width: 768px) {
+            .show-card .card-img-top{
+                max-height: 300px;
+                max-width: 80%;
+
+            }
+            #map {
+                height: 260px;
+                max-width: 80%;
+            }
+
+        }
