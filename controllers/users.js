@@ -48,6 +48,9 @@ module.exports.login=async(req,res)=>{
     res.redirect(redirectUrl);
 };
 
+/**
+ * Log out the current user and redirect to listings page.
+ */
 module.exports.logout=(req,res,next)=>{
     req.logout((err)=>{
         if(err){
