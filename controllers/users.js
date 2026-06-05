@@ -7,6 +7,10 @@ module.exports.renderSignupForm=(req,res)=>{
     res.render("users/signup.ejs");
 };
 
+/**
+ * Register a new user in the database.
+ * Automatically logs the user in upon successful registration.
+ */
 module.exports.signup=async(req,res,next)=>{
     try{
         let{username,email,password}=req.body;
