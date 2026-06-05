@@ -94,6 +94,7 @@ app.get('/', (req, res) => {
   res.redirect("/listings");
 });
 
+// Mount resource and authentication routers to respective paths
 app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter);
 app.use("/",userRouter);
