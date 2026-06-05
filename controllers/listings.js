@@ -69,6 +69,10 @@ module.exports.createListing=async(req,res,next)=>{
     res.redirect("/listings");
 };
 
+/**
+ * Render the edit form for a listing.
+ * Modifies the image URL to request a lower resolution preview thumbnail.
+ */
 module.exports.renderEditForm=async(req,res)=>{
     let {id}=req.params;
     const listing = await Listing.findById(id);
