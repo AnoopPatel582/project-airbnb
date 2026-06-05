@@ -8,6 +8,7 @@ cloudinary.config({
     api_secret: process.env.CLOUD_API_SECRET
 });
 
+// Configure Cloudinary storage engine with specific folder name and formats
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
