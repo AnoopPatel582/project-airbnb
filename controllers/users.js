@@ -32,6 +32,9 @@ module.exports.signup=async(req,res,next)=>{
     }
 };
 
+/**
+ * Render the login form page.
+ */
 module.exports.renderLoginForm=(req,res)=>{
     res.render("users/login.ejs");
 };
