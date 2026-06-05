@@ -105,6 +105,10 @@ module.exports.updateListing=async(req,res)=>{
     res.redirect(`/listings/${id}`);
 };
 
+/**
+ * Delete a listing from the database.
+ * Triggers pre-middleware for deleting associated reviews.
+ */
 module.exports.destroyListing=async(req,res)=>{
     let {id}=req.params;
     let deletedListing=await Listing.findByIdAndDelete(id);
