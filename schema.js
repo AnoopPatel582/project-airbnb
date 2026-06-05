@@ -1,5 +1,6 @@
 const Joi=require("joi")
 
+// Joi schema definition for listing validation validation rules
 module.exports.listingSchema=Joi.object({
     listing:Joi.object({
         title:Joi.string().required(),
