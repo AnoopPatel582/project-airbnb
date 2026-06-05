@@ -52,6 +52,9 @@ module.exports.isReviewAuthor= async(req,res,next)=>{
     next();
 }
 
+/**
+ * Validation middleware to validate listing request body against Joi schema.
+ */
 module.exports.validateListing=(req,res,next)=>{
     let{error}=listingSchema.validate(req.body);
     if(error){
