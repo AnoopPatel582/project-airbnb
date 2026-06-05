@@ -1,5 +1,8 @@
 const mongoose=require("mongoose");
 const Schema=mongoose.Schema;
+/**
+ * Review Schema representing listing feedback and ratings.
+ */
 const reviewSchema= new Schema({
     comment: String,
     rating:{
