@@ -39,6 +39,9 @@ module.exports.renderLoginForm=(req,res)=>{
     res.render("users/login.ejs");
 };
 
+/**
+ * Log in a user and redirect them to their intended page or default listing index.
+ */
 module.exports.login=async(req,res)=>{
     req.flash("success","Welcome to the Wanderlust! You are logged in.");
     let redirectUrl=res.locals.redirectUrl || "/listings";
