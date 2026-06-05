@@ -20,6 +20,10 @@ module.exports.renderNewForm=(req,res)=>{
     res.render("listings/new.ejs");
 }
 
+/**
+ * Show detailed view of a single listing.
+ * Populates owner and reviews with their author details.
+ */
 module.exports.showListing=async(req,res)=>{
     let {id}=req.params;
     const listing = await Listing.findById(id)
