@@ -24,6 +24,7 @@ const User=require("./models/user.js");
 
 const dbUrl=process.env.ATLASDB_URL;
 
+// Connect to MongoDB Database via Mongoose
 main()
 .then(()=>{
     console.log("connected to DB");
