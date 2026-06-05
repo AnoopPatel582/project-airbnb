@@ -17,6 +17,7 @@ async function main() {
   await mongoose.connect(MONGO_URL);
 }
 
+// Function to clear existing listings database collection and insert mock seed data
 const initDB = async () => {
   await Listing.deleteMany({});
   initData.data=initData.data.map((obj)=>({
