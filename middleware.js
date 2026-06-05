@@ -24,6 +24,9 @@ module.exports.saveRedirectUrl=(req,res,next)=>{
     next();
 }
 
+/**
+ * Authorization middleware to check if current user is owner of the listing.
+ */
 module.exports.isOwner= async(req,res,next)=>{
     let{id}=req.params;
     let listing=await Listing.findById(id);
